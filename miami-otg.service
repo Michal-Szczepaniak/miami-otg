@@ -1,0 +1,11 @@
+[Unit]
+Description=Miami otg service
+DefaultDependencies=no
+
+[Service]
+ExecStart=/usr/bin/miami-otg
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
