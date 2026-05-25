@@ -1,10 +1,10 @@
 {
-    "translation_catalog": "settings-system",
+    "translation_catalog": "miami-otg",
     "entries": [
         {
             "path": "system_settings/look_and_feel/topmenu/otg/enable_switch",
             "type": "custom",
-            "translation": "otg",
+            "translation_id": "miami-otg",
             "icon": "image://theme/icon-m-usb",
             "params": {
                 "source": "/usr/share/jolla-settings/pages/otg/EnableSwitch.qml",

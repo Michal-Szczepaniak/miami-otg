@@ -3,6 +3,7 @@ Description=Miami otg service
 DefaultDependencies=no
 
 [Service]
+Type=simple
 ExecStart=/usr/bin/miami-otg
 Restart=always
 RestartSec=1

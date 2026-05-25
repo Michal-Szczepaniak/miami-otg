@@ -10,7 +10,8 @@ SOURCES += src/miami-otg.cpp \
 DISTFILES += qml/miami-otg.qml \
     qml/pages/otg/EnableSwitch.qml \
     rpm/miami-otg.spec \
-    otg.json \
+    otg.json \    
+    i18n/*.ts \
     miami-otg.service
 
 target.path = /usr/bin
@@ -24,7 +25,12 @@ entries.path = /usr/share/jolla-settings/entries
 pages.files = qml/pages/otg/EnableSwitch.qml
 pages.path = /usr/share/jolla-settings/pages/otg/
 
-INSTALLS += systemd entries pages target
+translations.path = /usr/share/translations
+translations.files = i18n/*.qm
+
+system(lrelease -idbased $$PWD/i18n/*.ts)
+
+INSTALLS += systemd entries pages target translations
 
 HEADERS += \
     src/dbusobject.h

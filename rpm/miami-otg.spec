@@ -28,13 +28,8 @@ OTG switch for miami
 %make_build
 
 %post
-%systemd_post miami-otg.service
-
-%preun
-%systemd_preun miami-otg.service
-
-%postun
-%systemd_postun_with_restart miami-otg.service
+systemctl daemon-reload >/dev/null 2>&1 || :
+systemctl enable miami-otg.service >/dev/null 2>&1 || :
 
 %install
 %qmake5_install
@@ -44,4 +39,5 @@ OTG switch for miami
 %{_bindir}/%{name}
 %{_datadir}/jolla-settings/entries/otg.json
 %{_datadir}/jolla-settings/pages/otg/EnableSwitch.qml
+%{_datadir}/translations
 %{_unitdir}/%{name}.service

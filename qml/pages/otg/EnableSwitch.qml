@@ -7,7 +7,7 @@ import Nemo.DBus 2.0
 SettingsToggle {
     id: root
 
-    name: "OTG"
+    name: qsTrId("miami-otg")
     icon.source: "image://theme/icon-m-usb"
 
     busy: false
