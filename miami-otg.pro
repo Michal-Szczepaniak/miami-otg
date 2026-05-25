@@ -19,6 +19,9 @@ target.path = /usr/bin
 systemd.files = miami-otg.service
 systemd.path = /usr/lib/systemd/system/
 
+dbus.files = miami.otg.conf
+dbus.path = /usr/share/dbus-1/system.d/
+
 entries.files = otg.json
 entries.path = /usr/share/jolla-settings/entries
 
@@ -30,7 +33,7 @@ translations.files = i18n/*.qm
 
 system(lrelease -idbased $$PWD/i18n/*.ts)
 
-INSTALLS += systemd entries pages target translations
+INSTALLS += systemd entries pages target translations dbus
 
 HEADERS += \
     src/dbusobject.h

@@ -38,6 +38,7 @@ systemctl enable miami-otg.service >/dev/null 2>&1 || :
 %defattr(-,root,root,-)
 %{_bindir}/%{name}
 %{_datadir}/jolla-settings/entries/otg.json
+%{_datadir}/dbus-1/system.d
 %{_datadir}/jolla-settings/pages/otg/EnableSwitch.qml
 %{_datadir}/translations
 %{_unitdir}/%{name}.service
